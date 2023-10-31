@@ -1,8 +1,8 @@
 # terraform_templates
-Terraform repository
+My personal Terraform plans repository. I keep track of all the general use plans to quickly spin up LXCs or VMs in my proxmox instance
 
 ## Use
-To track all my proxmox templates written in terraform
+To track all my proxmox templates written in terraform.
 
 
 ## Structure
