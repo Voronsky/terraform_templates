@@ -31,12 +31,12 @@ variable "cpus"{
 
 variable "dns" {
   type = string
-  default = "neth.idiaz.dev"
+  default = ""
 }
 
 variable "nameserver" {
   type = string
-  default = "172.16.0.2"
+  default = "8.8.8.8"
 }
 
 variable "storage" {
