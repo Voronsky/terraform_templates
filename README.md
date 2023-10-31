@@ -7,7 +7,9 @@ To track all my proxmox templates written in terraform.
 
 ## Structure
 `shared_variables` - single source of all variables used across various plans
+
 `basic/` - a simple low resource LXC
+
 `large/` - a 'large' LXC
 
 ## Considerations
