@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "proxmox" {
-    pm_api_url = "https://pve.idiaz.dev/api2/json"
-    pm_api_token_id = "terraform-prov@pve!terraform"
+    pm_api_url = var.pm_api_url
+    pm_api_token_id = var.pm_api_token_id
     pm_api_token_secret = var.pm_api_token_secret
 }
 
@@ -19,8 +19,8 @@ resource "proxmox_lxc" "basic" {
   ostemplate   = "local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst"
   password     = "lxcpassword"
   unprivileged = true
-  searchdomain = "neth.idiaz.dev"
-  nameserver = "172.16.0.2" //nethserver
+  searchdomain = var.dns
+  nameserver = var.nameserver //nethserver
   tags = "personal"
 
   // Terraform will crash without rootfs defined
